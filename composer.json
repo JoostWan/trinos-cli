@@ -1,18 +1,18 @@
 {
     "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
+    "description": "Trinos CLI",
     "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
     "homepage": "https://laravel-zero.com",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/JoostWan/trinos-cli/issues",
+        "source": "https://github.com/JoostWan/trinos-cli"
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Joost Wanetie",
+            "email": "joost@trinos.nl"
         }
     ],
     "require": {
@@ -49,7 +49,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "bin": ["trinos"],
+    "bin": ["trinosdev"],
     "repositories": {
         "illuminate/config": {
             "type": "git",
