@@ -37,6 +37,7 @@ class DatabaseImportFix extends Command
             $file = $this->argument('file');
 
             $process = new Process(["ex","-sc", "1i|SET sql_mode='NO_AUTO_VALUE_ON_ZERO';" , "-cx", $file]);
+            $process->setTimeout(3600);
             $process->run();
 
             // executes after the command finishes
@@ -52,6 +53,7 @@ class DatabaseImportFix extends Command
             $file = $this->argument('file');
 
             $process = new Process(["sed", "-i", "" , "s/DEFINER=[^*]*\*/\*/g" , $file]);
+            $process->setTimeout(3600);
             $process->run();
 
             // executes after the command finishes

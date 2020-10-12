@@ -38,7 +38,7 @@ class DisableRecaptcha extends Command
 
         $this->task("Disable Magento 2 default Recaptcha backend", function () {
 
-            $process = new Process(['magerun2', 'config:store:set', 'msp_securitysuite_recaptcha/backend/enable', 0]);
+            $process = new Process(['magerun2', 'config:store:set', 'msp_securitysuite_recaptcha/backend/enabled', 0]);
             $process->run();
 
             // executes after the command finishes
@@ -51,7 +51,7 @@ class DisableRecaptcha extends Command
 
         $this->task("Disable Magento 2 default Recaptcha frontend", function () {
 
-            $process = new Process(['magerun2', 'config:store:set', 'msp_securitysuite_recaptcha/frontend/enable', 0]);
+            $process = new Process(['magerun2', 'config:store:set', 'msp_securitysuite_recaptcha/backend/enabled', 0]);
             $process->run();
 
             // executes after the command finishes

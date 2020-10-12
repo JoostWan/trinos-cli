@@ -14,14 +14,14 @@ class WatchLess extends Command
      *
      * @var string
      */
-    protected $signature = 'webme:style';
+    protected $signature = 'trinos:style';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Clean cache files and Watch for *.less files inside Webme theme';
+    protected $description = 'Clean cache files and Watch for *.less files inside theme folder';
 
     /**
      * Function for compile less files with Gulp
@@ -43,7 +43,7 @@ class WatchLess extends Command
             return true;
         });
 
-        $this->task("Republishes symlinks to the source files for webme theme", function () {
+        $this->task("Republishes symlinks to the source files for theme", function () {
 
             $process = new Process(['gulp', 'exec', '--trinos']);
             $process->run();
